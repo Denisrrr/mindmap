@@ -2,6 +2,7 @@
   "dependencies": {
     "@userfront/core": "^0.5.8",
     "axios": "^1.4.0",
+    "firebase": "^9.22.0",
     "formik": "^2.2.9",
     "hot": "^0.0.7",
     "react": "^18.2.0",

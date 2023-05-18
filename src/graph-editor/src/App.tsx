@@ -6,6 +6,7 @@ import LoginPage from "auth/pages/LoginPage";
 import RegisterPage from "auth/pages/RegisterPage";
 import AccountPage from "auth/pages/AccountPage";
 import ForgotPage from "auth/pages/ForgotPage";
+import ResetPage from "auth/pages/ResetPage";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
             <Route path={"graphList/"} element={<AccountPage />} />
             <Route path={"graphs/:graphId"} element={<GraphPage />} />
             <Route path={"forgot/"} element={<ForgotPage/>} />
+            <Route path={"reset/"} element={<ResetPage initialPassword={""}/>} />
         </Routes>
     );
 }
