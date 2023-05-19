@@ -23,6 +23,7 @@ import CopyLabel from "components/CopyLabel";
 import Minimap from "graph/ui/Minimap";
 import { primaryLightColor } from "vars";
 import Username from "../components/auth/Username";
+import FormInput from "components/forms/FormInput";
 
 export interface GraphProps {
     graphId: string;
@@ -186,6 +187,13 @@ const Graph: FC<GraphProps> = React.memo(({ graphId }) => {
                     if (rightClickedNode)
                         dispatch(graphDataSlice.actions.deleteNode(rightClickedNode.id));
                 }}
+                //onColorNodeClick={() => {
+                //    setNodeCmPosition(undefined);
+                //    setAddLinkSelectedNode(rightClickedNode);
+                //    <div className={styles.group}>
+                //        <FormInput field="color" type={"color"} placeholder="Color" className={styles.colorInput} />
+                //    </div>
+                //}}
             />
             <AddLinkHelpMessage visible={addingLink} onCancel={resetLinkAdding} />
             <AddNodeContextMenu

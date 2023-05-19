@@ -47,10 +47,14 @@ const graphDataSlice = createSlice({
             const nodeIndex = state.nodes.findIndex(x => x.id === nodeId);
             if (nodeIndex < 0)
                 return;
-
             state.nodes.splice(nodeIndex, 1);
             state.links = state.links.filter(x => x.source !== nodeId && x.target !== nodeId);
         },
+        //editNode(state, { payload: { nodeId, color } }: PayloadAction<{ nodeId: string; color: string }>) {
+        //    const nodeIndex = state.nodes.findIndex((x) => x.id === nodeId);
+        //    if (nodeIndex < 0) return;
+        //    state.nodes[nodeIndex].meta.color = color;
+        //},
         addLink(state, { payload }: PayloadAction<GraphLink>) {
             if (state.nodes.find(x => x.id === payload.source) && state.nodes.find(x => x.id === payload.target)) {
                 state.links.push({ source: payload.source, target: payload.target } as any);

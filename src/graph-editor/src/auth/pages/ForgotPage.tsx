@@ -6,7 +6,7 @@ import * as yup from "yup";
 import CenteredContainer from "components/CentredContainer";
 import FormInput from "../../components/forms/FormInput";
 import { userService } from "../authApi";
-import ResetPassword from "./ResetPage"; // Импортируем компонент с функцией сброса пароля
+import ResetPassword from "./ResetPage";
 
 const ForgotPasswordSchema = yup.object({
   email: yup.string().email("Not a valid email").required("Empty email"),

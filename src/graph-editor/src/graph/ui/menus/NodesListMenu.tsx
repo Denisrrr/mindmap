@@ -9,6 +9,7 @@ export interface NodesListMenuProps {
   nodes: GraphNode[];
   onNodeDelete?: (node: GraphNode) => void;
   onNodeClick?: (node: GraphNode) => void;
+  onNodeColor?: (node: GraphNode) => void;
 }
 
 const NodesListMenu: FC<NodesListMenuProps> =
